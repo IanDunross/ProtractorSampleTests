@@ -17,4 +17,8 @@ export class MainPage {
     async getGoButton(){
         return await element(by.id('gobutton'));
     }
+
+    async getOperationResult(){
+        return await element(by.className('form-inline')).element(by.tagName('h2'));
+    }
 }

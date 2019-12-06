@@ -26,10 +26,17 @@ When(/^I select math operator from select option as "([^"]*)"$/,  async (mathSym
  })
 
  
-When(/^I click 'Go' button$/,{ timeout: 2 * 5000 }, async () => {
+When(/^I click 'Go' button$/, async () => {
     
     let goButton =  await page.getGoButton();
     await goButton.click();
-    await browser.sleep(5000);
+ 
+ })
+
+ Then(/^I see the number "([^"]*)" as a result$/,{ timeout: 2 * 5000 }, async (expectedNumber) => {
+    
+    let resultElement =  await page.getOperationResult();
+    expect(await resultElement.getText()).to.be.equal(expectedNumber);
+    await browser.sleep(3000);
  
  })
