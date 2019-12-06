@@ -13,4 +13,8 @@ export class MainPage {
     async getMathSelectElement(symbol) {
         return await element(by.cssContainingText('option', symbol));
     }
+
+    async getGoButton(){
+        return await element(by.id('gobutton'));
+    }
 }

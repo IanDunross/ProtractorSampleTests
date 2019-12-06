@@ -18,10 +18,18 @@ When(/^I enter first value as number "([^"]*)" and second value as number "([^"]
 
 })
 
-When(/^I select math operator from select option as "([^"]*)"$/, { timeout: 2 * 5000 }, async (mathSymbol) => {
+When(/^I select math operator from select option as "([^"]*)"$/,  async (mathSymbol) => {
     
     let option = await page.getMathSelectElement(mathSymbol);
     await option.click();
-    await browser.sleep(4000);
+ 
+ })
+
+ 
+When(/^I click 'Go' button$/,{ timeout: 2 * 5000 }, async () => {
+    
+    let goButton =  await page.getGoButton();
+    await goButton.click();
+    await browser.sleep(5000);
  
  })
