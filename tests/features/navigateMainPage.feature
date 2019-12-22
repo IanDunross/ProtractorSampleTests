@@ -1,8 +1,14 @@
-Feature: Go to main page of super calculator
+Feature: Mathematic operations with Angular Calculator application
 
-Scenario: Home Page
+Scenario: Checking if '+' operation working correctly
 Given I'm on the Calculator main page
-When I enter first value as number "10000" and second value as number "20000"
+When I enter first value as number "1111" and second value as number "2222"
 And I select math operator from select option as "+"
 And I click 'Go' button
-Then I see the number "30000" as a result
+Then I see the number "3333" as a result
+
+Scenario: Checking if '-' operation working correctly
+When I enter first value as number "101" and second value as number "102"
+And I select math operator from select option as "-"
+And I click 'Go' button
+Then I see the number "-1" as a result

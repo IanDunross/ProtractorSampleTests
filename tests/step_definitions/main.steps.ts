@@ -13,6 +13,8 @@ When(/^I enter first value as number "([^"]*)" and second value as number "([^"]
    let first = await page.getFirstCalcValueInput();
    let second = await page.getSecondCalcValueInput();
 
+   await first.clear();
+   await second.clear();
    await first.sendKeys(valueFirst);
    await second.sendKeys(valueSecond);
 
@@ -36,6 +38,7 @@ When(/^I click 'Go' button$/, async () => {
  Then(/^I see the number "([^"]*)" as a result$/,{ timeout: 2 * 5000 }, async (expectedNumber) => {
     
     let resultElement =  await page.getOperationResult();
+    expect(await resultElement.isDisplayed()).to.be.equal(true);
     expect(await resultElement.getText()).to.be.equal(expectedNumber);
     await browser.sleep(3000);
  
