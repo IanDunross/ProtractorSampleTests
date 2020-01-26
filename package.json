@@ -2,18 +2,19 @@
   "name": "protractorsampletests",
   "version": "1.0.0",
   "description": "sample tests of protractor framework",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "pree2e": "webdriver-manager update",
     "chromeSample": "protractor ./tests/config/protractor.chrome.config.js",
-    "firefoxSample": "protractor ./tests/config/protractor.firefox.config.js"
+    "firefoxSample": "protractor ./tests/config/protractor.firefox.config.js",
+    "e2e-generate-app-report-chrome": "node ./tests/reports/index-chrome.js",
+    "e2e-generate-app-report-firefox": "node ./tests/reports/index-firefox.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/IanDunross/ProtracorSampleTests.git"
   },
-  "author": "",
+  "author": "Ian Dunross",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/IanDunross/ProtracorSampleTests/issues"
@@ -25,6 +26,7 @@
     "@types/node": "^12.12.7",
     "chai": "^4.2.0",
     "cucumber": "^5.1.0",
+    "cucumber-html-reporter": "^5.1.0",
     "protractor": "^5.4.2",
     "protractor-cucumber-framework": "^6.1.3",
     "ts-node": "^8.4.1",
