@@ -2,7 +2,7 @@ var reporter = require('cucumber-html-reporter');
 
 var options = {
   theme: 'bootstrap',
-  jsonFile: './tests/reports/report-files/report-from-superCalculatorAngularPage-chrome.json',
+  jsonFile: './tests/reports/report-from-superCalculatorAngularPage-chrome.json',
   output: './tests/reports/report-from-superCalculatorAngularPage-chrome.html',
   reportSuiteAsScenarios: true,
   launchReport: false,

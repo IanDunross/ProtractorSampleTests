@@ -13,7 +13,7 @@ exports.config = {
             '../support/scenarioHook.ts'
         ],
         tags: false,
-        format: ['json:./tests/reports/report-files/report-from-superCalculatorAngularPage-chrome.json'],
+        format: ['json:./tests/reports/report-from-superCalculatorAngularPage-chrome.json'],
         profile: false,
         'no-source': true
     },
